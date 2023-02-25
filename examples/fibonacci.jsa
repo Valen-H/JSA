@@ -1,0 +1,40 @@
+#function fib(n) {
+#	return n > 1 ? fib(n - 1) + fib (n - 2) : n;
+#} //fib
+
+l start
+	arr st
+	set ra, exit
+	arr n
+	arr r
+	eval a, "Number(arg)
+
+l fib
+	psh ra, st
+	
+	lte x, a, 1
+	if x, fib_exit
+	
+	psh a, n
+	
+	set ra, fib_cal_2
+	sub a, 1
+	j fib
+	l fib_cal_2
+	psh a, r
+	
+	set ra, fib_cal_2_exit
+	pop a, n
+	sub a, 2
+	j fib
+	l fib_cal_2_exit
+	set r2, a
+	pop r1, r
+	
+	add a, r1, r2
+l fib_exit
+	pop ra, st
+	j ra
+
+l exit
+	out a

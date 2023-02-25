@@ -1,0 +1,68 @@
+{
+  "name": "jsa",
+  "version": "0.1.0",
+  "description": "An assembly implementation in JS.",
+  "keywords": [
+    "jsa", "asm", "js", "eso"
+  ],
+  "homepage": "https://github.com/Valen-H/JSA#README.md",
+  "bugs": {
+    "url": "https://github.com/Valen-H/JSA/issues",
+    "email": "alternativexxxy@gmail.com"
+  },
+  "license": "ISC",
+  "author": "V. H. <alternativexxxy@gmail.com> (https://github.com/Valen-H)",
+  "contributors": [],
+  "files": [
+    "*"
+  ],
+  "main": "lib/jsa.js",
+  "bin": "bin/jsa.js",
+  "man": [],
+  "directories": {
+    "lib": "./lib",
+    "bin": "./bin",
+    "man": "./man",
+    "doc": "./doc",
+    "example": "./examples",
+    "test": "./test"
+  },
+  "typings": "./lib/typings/lib/JSA.d.ts",
+  "typesVersions": {
+    ">=3.0": {
+      "*": [
+        "./lib/*"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Valen-H/JSA.git",
+    "directory": "./"
+  },
+  "config": {
+    "port": 8080
+  },
+  "devDependencies": {},
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": ">=13.0.0",
+    "npm": ">=4.0.0"
+  },
+  "engineStrict": true,
+  "os": [],
+  "cpu": [],
+  "preferGlobal": true,
+  "private": false,
+  "publishConfig": {},
+  "scripts": {
+    "start": "node test/index.js",
+    "test": "jsa r test/test.jsa 50",
+    "debug": "node --trace-uncaught --expose-gc --inspect -r ./ test/index.js",
+    "build": "tsc -w",
+    "doc": "rm -rf ./doc/** && jsdoc ./dist -r -c jsdoc.json -d ./doc -R README.md -P package.json",
+    "prepack": "rm *.tgz || true"
+  },
+  "bundleDependencies": []
+}

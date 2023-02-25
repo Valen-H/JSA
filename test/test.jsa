@@ -1,0 +1,19 @@
+# This is a test, run with `jsa r .\test\test.jsa 1`
+
+evl x, "Math.tan
+evl arg, "arg
+arg y, arg, 0
+call x, x, y
+out x
+
+set l, 0
+set a, "finished\\s
+
+l start
+	lt j, l, y
+	add l
+	if j, start
+l exit
+
+add a, l
+out a
